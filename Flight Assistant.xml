@@ -21,7 +21,7 @@
      * number_of_luggages: NUMBER(1)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>120</y><w>220</w><h>110</h></coordinates><panel_attributes>HANGAR
 --
  F  * plane_id: NUMBER (10)
-     * hangar_number: nUMBER (2)
+     * hangar_number: NUMBER (2)
      * parking_slot: NUMBER (1)
      * capacity: NUMBER (3)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>620</y><w>230</w><h>110</h></coordinates><panel_attributes>EMPLOYEES
 --
