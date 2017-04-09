@@ -124,6 +124,7 @@ BEGIN
     END IF;
     
     --CLUJ-NAPOCA--
+<<<<<<< HEAD
     IF (v_oras1 like '%CLUJ-NAPOCA%' AND (v_oras2 like '%CONSTANTA%' OR v_oras2 like '%BUCURESTI%')) THEN
       INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1+2)||':00');
     END IF;
@@ -131,10 +132,20 @@ BEGIN
       INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1+1)||':00');
     END IF;
     IF (v_oras1 LIKE '%CLUJ-NAPOCA%' AND (v_oras2 like '%ORADEA%' OR v_oras2 like '%TIMISOARA%' OR v_oras2 like '%SIBIU%' OR v_oras2 like '%BACAU%')) THEN
+=======
+    IF (v_oras1 like '%CLUJ-NAPOCA%' AND (v_oras2 like '%CONSTANTA%' OR v_oras2 like '%BUCURESTI%') THEN
+      INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1+2)||':00');
+    END IF;
+    IF (v_oras1 like '%CLUJ-NAPOCA%' AND (v_oras2 like '%IASI%' OR v_oras2) THEN
+      INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1+1)||':00');
+    END IF;
+    IF (v_oras1 LIKE '%CLUJ-NAPOCA%' AND (v_oras2 like '%ORADEA%' OR v_oras2 like '%TIMISOARA%' OR v_oras2 like '%SIBIU%' OR v_oras2 like '%BACAU%') THEN
+>>>>>>> origin/master
       INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1)||':30');
     END IF;
     
     --SIBIU--
+<<<<<<< HEAD
     IF (v_oras1 like '%SIBIU%' AND (v_oras2 like '%IASI%' OR v_oras2 like '%CONSTANTA%' OR v_oras2 like '%ORADEA%')) THEN
       INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1+1)||':00');
     END IF;
@@ -147,6 +158,19 @@ BEGIN
       INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1+2)||':00');
     END IF;
     IF (v_oras1 like '%BACAU%' AND (v_oras2 like '%IASI%' OR v_oras2 like '%BUCURESTI%' OR v_oras2 like '%CONSTANTA%' OR v_oras2 like '%CLUJ%' OR v_oras2 like '%SIBIU%')) THEN
+=======
+    IF (v_oras1 like '%SIBIU%' AND (v_oras2 like '%IASI%' OR v_oras2 like '%CONSTANTA%' OR v_oras2 like '%ORADEA%') THEN
+      INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1+1)||':00');
+    END IF;
+    IF (v_oras1 like '%SIBIU%' AND (v_oras2 like '%BUCURESTI%' OR v_oras2 like '%TIMISOARA%' OR v_oras2 like '%CLUJ-NAPOCA%' OR v_oras2 like '%BACAU%') THEN
+      INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1)||':30');
+
+    --BACAU--
+    IF (v_oras1 like '%BACAU%' AND (v_oras2 like '%TIMISOARA%' OR v_oras2 like '%ORADEA%') THEN
+      INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1+2)||':00');
+    END IF;
+    IF (v_oras1 like '%BACAU%' AND (v_oras2 like '%IASI%' OR v_oras2 like '%BUCURESTI%' OR v_oras2 like '%CONSTANTA%' OR v_oras2 like '%CLUJ%' OR v_oras2 like '%SIBIU%') THEN
+>>>>>>> origin/master
       INSERT INTO FLIGHT values (FIDS+1263, 10000-FIDS+1, TO_DATE (TRUNC(DBMS_RANDOM.VALUE (2451545, 5373484)), 'J'),v_oras1, v_oras2, TO_CHAR(v_ora1)||':00', TO_CHAR(v_ora1)||':30');      
     END IF;
     
