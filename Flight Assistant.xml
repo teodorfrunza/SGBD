@@ -1,9 +1,9 @@
-<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>440</x><y>290</y><w>230</w><h>110</h></coordinates><panel_attributes>PLANE
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>352</x><y>290</y><w>230</w><h>110</h></coordinates><panel_attributes>PLANE
 --
  P  * plane_id: NUMBER (10)
       * company_name: VARCHAR2 (20)
       * fabrication_series: VARCHAR2 (20)
-      * plane_capacity: NUMBER (3)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>500</y><w>230</w><h>170</h></coordinates><panel_attributes>FLIGHT
+      * plane_capacity: NUMBER (3)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>500</y><w>230</w><h>170</h></coordinates><panel_attributes>FLIGHT
 --
  P  * flight_id: NUMBER (10)
  F  * plane_id: NUMBER (10)
@@ -12,36 +12,36 @@
      * takeoff_town: VARCHAR2 (20)
      * destination: VARCHAR2 (20)
      * takeoff_time: DATE
-     * arrival_time: DATE</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>510</y><w>230</w><h>140</h></coordinates><panel_attributes>BOOKING
+     * arrival_time: DATE</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>692</x><y>510</y><w>230</w><h>140</h></coordinates><panel_attributes>BOOKING
 --
  F  * flight_id: NUMBER (10)
      * person_id: VARCHAR2 (20)
      * last_name: VARCHAR2 (20)
      * first_name: VARCHAR2 (20)
      * seat_number: NUMBER (3)
-     * number_of_luggages: NUMBER(1)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>50</y><w>220</w><h>110</h></coordinates><panel_attributes>HANGAR
+     * number_of_luggages: NUMBER(1)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>50</y><w>220</w><h>110</h></coordinates><panel_attributes>HANGAR
 --
  F  * plane_id: NUMBER (10)
      * hangar_number: NUMBER (2)
      * occupied_slots: NUMBER (1)
-     * plane_status: VARCHAR(20)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>530</y><w>250</w><h>120</h></coordinates><panel_attributes>CREW
+     * plane_status: VARCHAR(20)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>22</x><y>530</y><w>250</w><h>120</h></coordinates><panel_attributes>CREW
 --
 P   * crew_id: NUMBER(10)
-     * employee_pilot_name: VARCHAR(20)
-     * employee_copilot_name: VARCHAR(20)
-     * employee_fa1_name: VARCHAR(20)
-     * employee_fa2_name: VARCHAR(20)
-     * employee_fa2_name: VARCHAR(20)
-//job_type = pilot/flight attendant/co-pilot</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>149</y><w>50</w><h>160</h></coordinates><panel_attributes>lt=-
+     * pilot_name: VARCHAR2(20)
+     * copilot_name: VARCHAR2(20)
+     * flight_attendant1: VARCHAR2(20)
+     * flight_attendant2: VARCHAR2(20)
+     * flight_attendant3: VARCHAR2(20)
+//job_type = pilot/flight attendant/co-pilot</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>452</x><y>149</y><w>50</w><h>160</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>389</y><w>50</w><h>130</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>389</y><w>50</w><h>130</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>559</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>572</x><y>559</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
-</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>559</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>262</x><y>559</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=0..n
 m2=1
 </panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element></diagram>
