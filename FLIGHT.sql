@@ -1,5 +1,5 @@
 drop table FLIGHT;
-create table FLIGHT(flight_id NUMBER(10) primary key, plane_id NUMBER(10) not null , flight_date DATE not null, takeoff_town VARCHAR2(20) not null, destination VARCHAR2(20) not null, takeoff_time VARCHAR(10) not null, arrival_time VARCHAR2(10) not null);
+create table FLIGHT(flight_id NUMBER(10) primary key, plane_id NUMBER(10) not null ,crew_id NUMBER(10) NOT NULL, flight_date DATE not null, takeoff_town VARCHAR2(20) not null, destination VARCHAR2(20) not null, takeoff_time VARCHAR(10) not null, arrival_time VARCHAR2(10) not null);
 ALTER TABLE FLIGHT
   ADD CONSTRAINT plane_id_fk FOREIGN KEY (plane_id) 
     REFERENCES PLANE(plane_id);
@@ -18,7 +18,7 @@ BEGIN
     LOOP
     FETCH cursor1 INTO v_linie;
     EXIT WHEN cursor1%NOTFOUND;
-      INSERT INTO FLIGHT VALUES (v_id,v_linie.plane_id,v_data,v_linie.takeoff_town,v_linie.destination,v_linie.takeoff_time,v_linie.arrival_time);
+      INSERT INTO FLIGHT VALUES (v_id,v_linie.plane_id,v_linie.crew_id,v_data,v_linie.takeoff_town,v_linie.destination,v_linie.takeoff_time,v_linie.arrival_time);
       v_id:=v_id+1;
       END LOOP;
     CLOSE cursor1;
