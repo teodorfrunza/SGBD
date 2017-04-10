@@ -33,12 +33,25 @@ BEGIN
     CLOSE cursor1;
     IF(v_flag=1) THEN
       IF(v_nr_slot!=4) THEN
-        INSERT INTO HANGAR VALUES (i,v_nr_hangar,v_nr_slot,'MAINTENANCE');
-        v_nr_slot:=v_nr_slot+1;
+        v_status:=DBMS_RANDOM.VALUE(1,10);
+        IF(v_status<=3) THEN
+          INSERT INTO HANGAR VALUES (i,v_nr_hangar,v_nr_slot,'MAINTENANCE');
+          v_nr_slot:=v_nr_slot+1;
+        ELSE
+          INSERT INTO HANGAR VALUES (i,v_nr_hangar,v_nr_slot,'PARKED');
+          v_nr_slot:=v_nr_slot+1;
+        END IF;
       ELSE
-        INSERT INTO HANGAR VALUES (i,v_nr_hangar,v_nr_slot,'MAINTENANCE');
+        v_status:=DBMS_RANDOM.VALUE(1,10);
+        IF(v_status<=3) THEN
+          INSERT INTO HANGAR VALUES (i,v_nr_hangar,v_nr_slot,'MAINTENANCE');
           v_nr_hangar:=v_nr_hangar+1;
           v_nr_slot:=1;
+        ELSE
+          INSERT INTO HANGAR VALUES (i,v_nr_hangar,v_nr_slot,'PARKED');
+          v_nr_hangar:=v_nr_hangar+1;
+          v_nr_slot:=1;
+        END IF;
       END IF;
     END IF;
   END LOOP;
