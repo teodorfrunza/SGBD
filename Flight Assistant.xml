@@ -11,14 +11,14 @@
      * flight_date: DATE
      * takeoff_town: VARCHAR2 (20)
      * destination: VARCHAR2 (20)
-     * takeoff_time: DATE
-     * arrival_time: DATE</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>692</x><y>510</y><w>230</w><h>140</h></coordinates><panel_attributes>BOOKING
+     * takeoff_time: VARCHAR2 (10)
+     * arrival_time: VARCHAR2 (10)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>692</x><y>510</y><w>230</w><h>140</h></coordinates><panel_attributes>BOOKING
 --
  F  * flight_id: NUMBER (10)
      * person_id: VARCHAR2 (20)
      * last_name: VARCHAR2 (20)
      * first_name: VARCHAR2 (20)
-     * seat_number: NUMBER (3)
+     * cnp: VARCHAR2 (30)
      * number_of_luggages: NUMBER(1)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>50</y><w>220</w><h>110</h></coordinates><panel_attributes>HANGAR
 --
  F  * plane_id: NUMBER (10)
@@ -26,13 +26,11 @@
      * occupied_slots: NUMBER (1)
      * plane_status: VARCHAR(20)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>22</x><y>530</y><w>250</w><h>120</h></coordinates><panel_attributes>CREW
 --
-P   * crew_id: NUMBER(10)
-     * pilot_name: VARCHAR2(20)
-     * copilot_name: VARCHAR2(20)
-     * flight_attendant1: VARCHAR2(20)
-     * flight_attendant2: VARCHAR2(20)
-     * flight_attendant3: VARCHAR2(20)
-//job_type = pilot/flight attendant/co-pilot</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>452</x><y>149</y><w>50</w><h>160</h></coordinates><panel_attributes>lt=-
+P  * crew_id: NUMBER(10)
+     * pilot_name: VARCHAR2(50)
+     * copilot_name: VARCHAR2(50)
+     * flight_attendant1: VARCHAR2(50)
+     * flight_attendant2: VARCHAR2(50)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>452</x><y>149</y><w>50</w><h>160</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..n
 </panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>389</y><w>50</w><h>130</h></coordinates><panel_attributes>lt=-
