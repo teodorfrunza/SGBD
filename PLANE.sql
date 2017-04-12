@@ -1,5 +1,3 @@
-drop table PLANE;
-/
 create table companyPlane(cname VARCHAR2(20), locuri integer);
 /
 insert into companyPlane values ('AirBus',10);

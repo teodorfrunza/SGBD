@@ -1,5 +1,3 @@
-drop table FLIGHT2;
-/
 create table FLIGHT2(plane_id NUMBER(10) not null ,crew_id NUMBER(10) NOT NULL,takeoff_town VARCHAR2(20) not null, destination VARCHAR2(20) not null, takeoff_time VARCHAR(10) not null, arrival_time VARCHAR2(10) not null);
 /
 --CURSE DE 2 ORE DIN IASI--

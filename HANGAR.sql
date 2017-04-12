@@ -1,8 +1,5 @@
-drop table HANGAR;
 create table HANGAR(plane_id NUMBER(10) NOT NULL,hangar_number NUMBER(2) NOT NULL,occupied_slots NUMBER(1) NOT NULL,plane_status VARCHAR(20));
-ALTER TABLE HANGAR
-  ADD CONSTRAINT plane_id_fk2 FOREIGN KEY (plane_id) 
-    REFERENCES PLANE(plane_id);
+
 /
 
 DECLARE

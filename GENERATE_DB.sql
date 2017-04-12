@@ -1,0 +1,40 @@
+DROP TABLE BOOKING;
+/
+DROP TABLE HANGAR;
+/
+DROP TABLE FLIGHT;
+/
+DROP TABLE PLANE;
+/
+DROP TABLE CREW;
+/
+DROP TABLE FLIGHT2;
+
+/
+@PLANE.sql;
+/
+@FLIGHT2.sql;
+/
+@FLIGHT.sql;
+/
+@HANGAR.sql;
+/
+@CREW.sql;
+/
+@BOOKING.sql;
+/
+ALTER TABLE FLIGHT
+  ADD CONSTRAINT plane_id_fk FOREIGN KEY (plane_id) 
+    REFERENCES PLANE(plane_id);
+/
+ALTER TABLE HANGAR
+  ADD CONSTRAINT plane_id_fk2 FOREIGN KEY (plane_id) 
+    REFERENCES PLANE(plane_id);
+/
+ALTER TABLE FLIGHT
+  ADD CONSTRAINT crew_id_fk FOREIGN KEY (crew_id) 
+    REFERENCES CREW(crew_id);
+/
+ALTER TABLE BOOKING
+  ADD CONSTRAINT flight_id_fk FOREIGN KEY (flight_id) 
+    REFERENCES FLIGHT(flight_id);
