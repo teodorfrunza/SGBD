@@ -1,0 +1,160 @@
+<?php
+
+	//Oracle DB user name
+	$username = 'student';
+
+	// Oracle DB user password
+	$password = 'STUDENT';
+
+	// Oracle DB connection string
+	$connection_string = 'localhost/xe';
+
+	//Connect to an Oracle database
+	$connection = oci_connect(
+	$username,
+	$password,
+	$connection_string
+	);
+
+	/*If (!$connection)
+		echo 'The keks were not in your favour -- connection failed';
+	else
+		echo 'Praised be Kek! -- connection succesfull';
+*/
+?>
+
+	<head>
+		<title> Hello World! </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="myStyleIndex.css">
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+	</head>
+
+	<body>	
+		<a href="index.html">
+		<i class="fa fa-home fa-4x" style="position:absolute;top:1%;right:49%;color:green"></i>
+		</a>
+		<div class="img" style="left: 40%;top: 30%;">
+			<div class="button">
+				<a>Create</a>
+			</div>
+		</div>
+		<div class="img" style="left: 50%;top: 30%;">
+			<div class="button">
+				<a href="test_connection2.html">Read</a>
+			</div>
+		</div>
+		<div class="img" style="left: 70%;top: 30%;">
+			<div class="button">
+				<a>Update</a>
+			</div>
+		</div>
+		<div class="img" style="left: 80%;top: 30%;">
+			<div class="button">
+				<a>Delete</a>
+			</div>
+		</div>
+		<div class="b" style="left:10%;">
+		<form action="form.php" method="post">
+			Flight id:  <input type="text" name="flight_id" />
+			Flight date:  <input type="text" name="flight_date" />
+			Takeoff town:  <input type="text" name="takeoff_town" />
+			Destination:  <input type="text" name="destination" />
+			Takeoff time:  <input type="text" name="takeoff_time" />
+			Arrival time:  <input type="text" name="arrival_time" />
+		</form>
+		<div class="button" style="border:2px solid black;border-radius:2px;width:80px;top:-5%;position:absolute;left:102%">
+				<a style="line-height:1.5em;">Filter</a>
+		</div>
+		</div>
+	<div class="php" style="left:5%">
+		<?php
+			$s = oci_parse($connection, 'select flight_id from FLIGHT');
+			oci_execute($s);
+			oci_fetch_all($s, $res);
+			echo "<pre>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			var_dump($res);
+			echo "</pre>\n";
+		?>
+	</div>
+	<div class="php" style="left:10%">
+		<?php
+			$s = oci_parse($connection, 'select flight_date from FLIGHT');
+			oci_execute($s);
+			oci_fetch_all($s, $res);
+			echo "<pre>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			var_dump($res);
+			echo "</pre>\n";
+		?>
+	</div>
+	<div class="php" style="left:15%">
+		<?php
+			$s = oci_parse($connection, 'select takeoff_town from FLIGHT');
+			oci_execute($s);
+			oci_fetch_all($s, $res);
+			echo "<pre>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			var_dump($res);
+			echo "</pre>\n";
+		?>
+	</div>
+	<div class="php" style="left:20%">
+		<?php
+			$s = oci_parse($connection, 'select destination from FLIGHT');
+			oci_execute($s);
+			oci_fetch_all($s, $res);
+			echo "<pre>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			var_dump($res);
+			echo "</pre>\n";
+		?>
+	</div>
+	<div class="php" style="left:25%">
+		<?php
+			$s = oci_parse($connection, 'select takeoff_time from FLIGHT');
+			oci_execute($s);
+			oci_fetch_all($s, $res);
+			echo "<pre>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			var_dump($res);
+			echo "</pre>\n";
+		?>
+	</div>
+	<div class="php" style="left:30%">
+		<?php
+			$s = oci_parse($connection, 'select arrival_time from FLIGHT');
+			oci_execute($s);
+			oci_fetch_all($s, $res);
+			echo "<pre>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			echo "<br>\n";
+			var_dump($res);
+			echo "</pre>\n";
+		?>
+	</div>
+	</body>
+<?php
+	// Close connection
+	oci_close($connection);
+
+?>
