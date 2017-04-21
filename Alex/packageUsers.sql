@@ -127,6 +127,8 @@ create or replace package body proiect_users as
       raise_application_error(-20011,'Nu avem data '||p_data||' in baza noastra de date');
     when eroare9 then
       raise_application_error(-20012,'Data invalida (masina timpului nu s-a inventat inca, ne pare rau!)');
+    when others then
+      raise_application_error(-20003,'Eroare necunoscuta');
   end freeFlights;
   
   
@@ -226,6 +228,8 @@ create or replace package body proiect_users as
     EXCEPTION
     when eroare then
       raise_application_error(-20013,'Nu exista persoana cu cnp-ul "'||p_cnp||'"');
+    when others then
+      raise_application_error(-20003,'Eroare necunoscuta');
     
   end sugestii;
   

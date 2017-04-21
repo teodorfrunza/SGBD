@@ -5,7 +5,7 @@ DECLARE
   CURSOR cursor1 IS 
     SELECT * FROM FLIGHT2;
   v_linie cursor1%ROWTYPE;
-  v_data DATE :='01-JAN-17';
+  v_data DATE :='20-FEB-17';
   v_repetari NUMBER:=0;
 BEGIN
   LOOP
